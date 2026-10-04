@@ -1,0 +1,20 @@
+{
+	"name": "DS_delete",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CpySinglefileSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "employees (2).csv",
+				"folderPath": "Input",
+				"fileSystem": "mycontainer"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

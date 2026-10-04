@@ -1,0 +1,42 @@
+{
+	"name": "ASQL_CountryRegionFolder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "YEAR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MONTH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVOICEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REGION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SALES",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "InvoiceData"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

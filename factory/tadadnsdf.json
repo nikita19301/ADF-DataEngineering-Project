@@ -1,0 +1,15 @@
+{
+	"name": "tadadnsdf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f560bd0f-61fd-42d5-abfc-9f53fbb66250",
+		"tenantId": "797fe2a9-31ce-47aa-bafe-8a904b154b44"
+	}
+}

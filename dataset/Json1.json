@@ -1,0 +1,40 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLJSON",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "employees_one_null.json",
+				"folderPath": "Input",
+				"fileSystem": "mycontainer"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"employee_id": {
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"department": {
+					"type": "string"
+				},
+				"salary": {
+					"type": "integer"
+				},
+				"hire_date": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,59 @@
+{
+	"name": "cpyvartimeframe",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "currentdatetime",
+					"value": {
+						"value": "@utcNow()",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "currentdatetime1hrback",
+					"value": {
+						"value": "@subtractFromTime(utcNow(),1,'Hour')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"currentdatetime": {
+				"type": "String"
+			},
+			"currentdatetime1hrback": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-09-13T18:10:48Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

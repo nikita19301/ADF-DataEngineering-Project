@@ -1,0 +1,17 @@
+{
+	"name": "ASQL_Col",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tblOrders"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

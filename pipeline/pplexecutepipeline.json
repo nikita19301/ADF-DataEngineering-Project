@@ -1,0 +1,29 @@
+{
+	"name": "pplexecutepipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pplParameter",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"x": 20
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-09-19T20:37:02Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
