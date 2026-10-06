@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "tadadnsdf"
+		},
+		"ADLJSON_accountKey": {
+			"value": ""
+		},
+		"ADLallfolder_accountKey": {
+			"value": ""
+		},
+		"ASQLcpy_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"CpySinglefileSQL_accountKey": {
+			"value": ""
+		},
+		"LS_ASQL_password": {
+			"value": ""
+		},
+		"ADLJSON_properties_typeProperties_url": {
+			"value": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"ADLallfolder_properties_typeProperties_url": {
+			"value": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"ASQLcpy_properties_typeProperties_server": {
+			"value": "servertadadns.database.windows.net"
+		},
+		"ASQLcpy_properties_typeProperties_database": {
+			"value": "dbtadadns"
+		},
+		"ASQLcpy_properties_typeProperties_userName": {
+			"value": "tadadnsadmin"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"CpySinglefileSQL_properties_typeProperties_url": {
+			"value": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"LS_ASQL_properties_typeProperties_server": {
+			"value": "servertadadns.database.windows.net"
+		},
+		"LS_ASQL_properties_typeProperties_database": {
+			"value": "dbtadadns"
+		},
+		"LS_ASQL_properties_typeProperties_userName": {
+			"value": "tadadnsadmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

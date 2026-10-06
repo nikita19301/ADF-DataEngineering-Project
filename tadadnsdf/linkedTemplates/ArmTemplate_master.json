@@ -1,0 +1,274 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "tadadnsdf"
+		},
+		"ADLJSON_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLJSON'"
+		},
+		"ADLallfolder_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLallfolder'"
+		},
+		"ASQLcpy_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ASQLcpy'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"CpySinglefileSQL_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'CpySinglefileSQL'"
+		},
+		"LS_ASQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_ASQL'"
+		},
+		"ADLJSON_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"ADLallfolder_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"ASQLcpy_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "servertadadns.database.windows.net"
+		},
+		"ASQLcpy_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbtadadns"
+		},
+		"ASQLcpy_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "tadadnsadmin"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"CpySinglefileSQL_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://strtadadns.dfs.core.windows.net/"
+		},
+		"LS_ASQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "servertadadns.database.windows.net"
+		},
+		"LS_ASQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbtadadns"
+		},
+		"LS_ASQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "tadadnsadmin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "tadadnsdf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ADLJSON_accountKey": {
+						"value": "[parameters('ADLJSON_accountKey')]"
+					},
+					"ADLallfolder_accountKey": {
+						"value": "[parameters('ADLallfolder_accountKey')]"
+					},
+					"ASQLcpy_password": {
+						"value": "[parameters('ASQLcpy_password')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"CpySinglefileSQL_accountKey": {
+						"value": "[parameters('CpySinglefileSQL_accountKey')]"
+					},
+					"LS_ASQL_password": {
+						"value": "[parameters('LS_ASQL_password')]"
+					},
+					"ADLJSON_properties_typeProperties_url": {
+						"value": "[parameters('ADLJSON_properties_typeProperties_url')]"
+					},
+					"ADLallfolder_properties_typeProperties_url": {
+						"value": "[parameters('ADLallfolder_properties_typeProperties_url')]"
+					},
+					"ASQLcpy_properties_typeProperties_server": {
+						"value": "[parameters('ASQLcpy_properties_typeProperties_server')]"
+					},
+					"ASQLcpy_properties_typeProperties_database": {
+						"value": "[parameters('ASQLcpy_properties_typeProperties_database')]"
+					},
+					"ASQLcpy_properties_typeProperties_userName": {
+						"value": "[parameters('ASQLcpy_properties_typeProperties_userName')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"CpySinglefileSQL_properties_typeProperties_url": {
+						"value": "[parameters('CpySinglefileSQL_properties_typeProperties_url')]"
+					},
+					"LS_ASQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_ASQL_properties_typeProperties_server')]"
+					},
+					"LS_ASQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_ASQL_properties_typeProperties_database')]"
+					},
+					"LS_ASQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ASQL_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "tadadnsdf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tadadnsdf_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "tadadnsdf_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tadadnsdf_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "tadadnsdf_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tadadnsdf_ArmTemplate_2')]"
+			]
+		},
+		{
+			"name": "tadadnsdf_ArmTemplate_4",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_4.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tadadnsdf_ArmTemplate_3')]"
+			]
+		},
+		{
+			"name": "tadadnsdf_ArmTemplate_5",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_5.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tadadnsdf_ArmTemplate_4')]"
+			]
+		},
+		{
+			"name": "tadadnsdf_ArmTemplate_6",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_6.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tadadnsdf_ArmTemplate_5')]"
+			]
+		}
+	]
+}
